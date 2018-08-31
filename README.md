@@ -1,10 +1,10 @@
 #An AvP2 custom launcher written as simple as possible in C#.
 
-Launch Aliens vs. Predator 2 for PC without the need of a CD crack.
-Engage social interaction via IRC chat. (Under development)
-Preview and join servers through a custom server list. (Under development)
-Download (optional) map packs made by the community. (Under development)
-...
+- Launch Aliens vs. Predator 2 for PC without the need of a CD crack.
+- Engage social interaction via IRC chat. (Under development)
+- Preview and join servers through a custom server list. (Under development)
+- Download (optional) map packs made by the community. (Under development)
+- ...
     
 Note(s):
 
