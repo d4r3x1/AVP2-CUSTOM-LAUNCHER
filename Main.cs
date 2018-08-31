@@ -21,8 +21,10 @@ namespace LAUNCHER
         }
 
 ///----------------------------------------------------------------------
-///                              BUTTONS
+///                       BUTTONS - FUNCTIONALITY
 ///-----------------------------------------------------------------------
+
+        ///This button starts the game itself.
 
         private void PlayAvP2Button_Click(object sender, EventArgs e)
         {
@@ -51,6 +53,8 @@ namespace LAUNCHER
             }
         }
 
+        ///This button starts the our multiplayer experience.
+
         private void StartMPButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -58,6 +62,9 @@ namespace LAUNCHER
             f2.ShowDialog();
             return;
         }
+
+        ///This button opens the settings form.
+        ///It also checks if the required files exist or not.
 
         private void AvP2SettingsButton_Click(object sender, EventArgs e)
         {
@@ -83,6 +90,8 @@ namespace LAUNCHER
             }
         }
 
+        ///This button opens the README form.
+
         private void ReadmeButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -91,10 +100,18 @@ namespace LAUNCHER
             return;
         }
 
+        ///This button does something rather funky.
+
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+?//----------------------------------------------------------------------
+///                          BUTTONS - EFFECTS
+///-----------------------------------------------------------------------
+
+        ///Plays a sound whenever we hover over a button.
 
         private void ButtonHover(object sender, EventArgs e)
         {
@@ -105,6 +122,8 @@ namespace LAUNCHER
             my_wave_file.Play();
         }
 
+        ///Plays a sound whenever we press a button.
+
         private void ButtonDown(object sender, MouseEventArgs e)
         {
             string rootLocation = typeof(Program).Assembly.Location;
@@ -114,50 +133,70 @@ namespace LAUNCHER
             my_wave_file.Play();
         }
 
+        ///Highlights the button on hover.
+
         private void PlayAvP2ButtonEnter(object sender, EventArgs e)
         {
             PlayAvP2Button.BackgroundImage = Properties.Resources.BUTTONPLAYUP;
         }
+
+        ///Returns the button back to normal whenever we leave it.
 
         private void PlayAvP2ButtonLeave(object sender, EventArgs e)
         {
             PlayAvP2Button.BackgroundImage = Properties.Resources.BUTTONPLAY;
         }
 
+        ///Highlights the button on hover.
+
         private void StartMPButtonEnter(object sender, EventArgs e)
         {
             StartMPButton.BackgroundImage = Properties.Resources.BUTTONSTARTMPUP;
         }
+
+        ///Returns the button back to normal whenever we leave it.
 
         private void StartMPButtonLeave(object sender, EventArgs e)
         {
             StartMPButton.BackgroundImage = Properties.Resources.BUTTONSTARTMP;
         }
 
+        ///Highlights the button on hover.
+
         private void AvP2SettingsButtonEnter(object sender, EventArgs e)
         {
             AvP2SettingsButton.BackgroundImage = Properties.Resources.BUTTONSETTINGSUP;
         }
+
+        ///Returns the button back to normal whenever we leave it.
 
         private void AvP2SettingsButtonLeave(object sender, EventArgs e)
         {
             AvP2SettingsButton.BackgroundImage = Properties.Resources.BUTTONSETTINGS;
         }
 
+        ///Highlights the button on hover.
+
         private void ReadmeButtonEnter(object sender, EventArgs e)
         {
             ReadmeButton.BackgroundImage = Properties.Resources.BUTTONSREADMEUP;
         }
+
+        ///Returns the button back to normal whenever we leave it.
 
         private void ReadmeButtonLeave(object sender, EventArgs e)
         {
             ReadmeButton.BackgroundImage = Properties.Resources.BUTTONSREADME;
         }
 
+        ///Highlights the button on hover.
+
         private void ExitButtonEnter(object sender, EventArgs e)
         {
             ExitButton.BackgroundImage = Properties.Resources.BUTTONEXITUP;
         }
+
+        ///Returns the button back to normal whenever we leave it.
 
         private void ExitButtonLeave(object sender, EventArgs e)
         {
@@ -165,7 +204,7 @@ namespace LAUNCHER
         }
 
 ///----------------------------------------------------------------------
-///                            FUNCTIONS
+///                           PREREQUISITES
 ///-----------------------------------------------------------------------
 
         private void Prerequisites()
@@ -462,8 +501,6 @@ namespace LAUNCHER
             + "-rez Multi.rez" + " " + "-rez AVP2dll.rez" + " " + "-rez AVP2l.rez" + " " + "-rez custom" + " " + "-rez AVP2p.rez" + " " + "-rez AVP2p2.rez" + " "
             + "-rez AVP2P1.REZ" + " " + "+DisableMusic 0" + " " + "+DisableSound 0" + " " + "+DisableMovies 0" + " " + "+EnableTripBuf 1" + " " + "+DisableHardwareCursor 0";
 
-     
-
             if (!File.Exists(cfgfileV))
             {
                 File.WriteAllText(cfgfileV, cfgcmdsV);
@@ -474,6 +511,10 @@ namespace LAUNCHER
                 File.WriteAllText(cmdfileV, commandsV);
             }
         }
+
+///----------------------------------------------------------------------
+///                           STARTUP SOUND
+///-----------------------------------------------------------------------
 
         private void startupsound()
         {
