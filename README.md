@@ -1,4 +1,4 @@
-#An AvP2 custom launcher written as simple as possible in C#.
+An AvP2 custom launcher written as simple as possible in C#.
 
 - Launch Aliens vs. Predator 2 for PC without the need of a CD crack.
 - Engage social interaction via IRC chat. (Under development)
